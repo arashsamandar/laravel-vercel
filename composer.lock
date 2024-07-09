@@ -1074,7 +1074,6 @@
                 "ext-filter": "*",
                 "ext-hash": "*",
                 "ext-mbstring": "*",
-                "ext-openssl": "*",
                 "ext-session": "*",
                 "ext-tokenizer": "*",
                 "fruitcake/php-cors": "^1.3",
