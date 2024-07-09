@@ -6,7 +6,7 @@
         "use": "vercel-php@0.6.0"
       }
     ],
-    "buildCommand": "mkdir -p /var/task/user/bootstrap/cache && chmod -R 775 /var/task/user/bootstrap/cache && composer install",
+    "buildCommand": "mkdir -p /tmp/cache && chmod -R 777 /tmp/cache && composer install",
     "routes": [
       {
         "src": "/(.*)",
