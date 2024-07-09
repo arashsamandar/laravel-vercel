@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\Configuration\Exceptions;
-use Illuminate\Foundation\Configuration\Middleware;
 
 $app = new Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
@@ -12,21 +10,20 @@ $app = new Application(
 $storagePath = env('APP_STORAGE', base_path('custom_storage'));
 $app->useStoragePath($storagePath);
 
-// Set the cache path explicitly
-$app->instance('path.cache', $storagePath . '/framework/cache');
+// Bind important interfaces
+$app->singleton(
+    Illuminate\Contracts\Http\Kernel::class,
+    App\Http\Kernel::class
+);
 
-// Configure the application
-$app->configure(basePath: dirname(__DIR__))
-    ->withRouting(
-        web: __DIR__.'/../routes/web.php',
-        commands: __DIR__.'/../routes/console.php',
-        health: '/up',
-    )
-    ->withMiddleware(function (Middleware $middleware) {
-        //
-    })
-    ->withExceptions(function (Exceptions $exceptions) {
-        //
-    });
+$app->singleton(
+    Illuminate\Contracts\Console\Kernel::class,
+    App\Console\Kernel::class
+);
+
+$app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    App\Exceptions\Handler::class
+);
 
 return $app;
