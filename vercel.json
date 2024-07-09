@@ -1,12 +1,15 @@
 {
     "version": 2,
-    "engines": {
-        "node": "18.x"
-    },
+    "builds": [
+      {
+        "src": "api/index.php",
+        "use": "vercel-php@0.6.0"
+      }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "api/index.php"
-        }
-    ]
-}
+      {
+        "src": "/(.*)",
+        "dest": "api/index.php"
+      }
+    ]   
+  }
