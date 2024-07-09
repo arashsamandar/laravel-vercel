@@ -19,4 +19,4 @@ $app = Application::configure(basePath: dirname(__DIR__))
 
 $app->useStoragePath(env('APP_STORAGE', base_path('/tmp')));
 
-return $app->create();
+return $app;
