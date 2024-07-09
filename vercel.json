@@ -3,15 +3,6 @@
     "engines": {
         "node": "18.x"
     },
-    "builds": [
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.6.0",
-            "config": {
-                "composerInstallCommand": "composer install --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist"
-            }
-        }
-    ],
     "routes": [
         {
             "src": "/(.*)",
