@@ -9,12 +9,3 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
-
-.env merge=ours
-/api/index.php merge=ours
-/app/Providers/AppServiceProvider.php merge=ours
-/config/cache.php merge=ours
-/config/logging.php merge=ours
-package.json merge=ours
-vercel.json merge=ours
-
