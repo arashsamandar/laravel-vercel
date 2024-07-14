@@ -3,17 +3,24 @@
 namespace Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Models\User;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     */
-    public function test_the_application_returns_a_successful_response(): void
-    {
-        $response = $this->get('/');
+    public function arash_test_two(): void{
+        User::create([
+            'name' => 'arash',
+            'email' => 'arash.internet@gmail.com',
+            'password' => bcrypt('samandar10')
+        ]);
+        $this->assertDatabaseHas('users', [
+            'name' => 'arash',
+            'email' => 'arash.internet@gmail.com',
+        ]);
+    }
 
-        $response->assertStatus(200);
+    public function test_to_check(){
+        $this->get('/up')->assertStatus(200);
     }
 }
