@@ -11,12 +11,8 @@
     ],
     "routes": [
         {
-            "src": "/(css|js)/(.*)",
-            "dest": "public/$1/$2"
-        },
-        {
-            "src": "/favicon/(.*)",
-            "dest": "/public/favicon/"
+            "src": "/(css|js|favicon)/(.*)",
+            "dest": "public/$1/$2/$3"
         },
         {
             "src": "/(.*)",
