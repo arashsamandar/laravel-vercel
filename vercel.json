@@ -6,20 +6,7 @@
             "use": "vercel-php@0.6.0"
         }
     ],
-    "buildCommand": "sudo mkdir -p tmp/storage/bootstrap/cache && sudo chmod -R 777 tmp/storage/bootstrap/cache && composer install",
     "routes": [
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/"
-        },
-        {
-            "src": "/resources/(.*)",
-            "dest": "/public/resources/"
-        },
-        {
-            "src": "/favicon/(.*)",
-            "dest": "/public/favicon/"
-        },
         {
             "src": "/(.*)",
             "dest": "api/index.php"
