@@ -18,3 +18,7 @@ Route::get('/testUser',function (){
 });
 
 Route::get('/testUser2',[\App\Http\Controllers\UsersController::class,'showUsers']);
+
+Route::get('/testUser3',function (){
+    return view('tests.showFilePath');
+});
