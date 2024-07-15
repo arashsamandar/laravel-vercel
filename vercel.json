@@ -16,7 +16,7 @@
         },
         {
             "src": "/favicon/(.*)",
-            "dest": "/public/favicon.ico"
+            "dest": "/public/favicon/"
         },
         {
             "src": "/(.*)",
