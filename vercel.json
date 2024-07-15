@@ -9,6 +9,10 @@
     "buildCommand": "sudo mkdir -p tmp/storage/bootstrap/cache && sudo chmod -R 777 tmp/storage/bootstrap/cache && composer install",
     "routes": [
         {
+            "src": "/build/(.*)",
+            "dest": "/public/build/$1"
+        },
+        {
             "src": "/(.*)",
             "dest": "api/index.php"
         }
