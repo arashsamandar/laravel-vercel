@@ -11,6 +11,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">Hello Arash -- Welcome To :  showUserTest.blade.php </h1>
+    <h1 class="text-3xl font-bold underline bg-slate-800">Hello Arash -- Welcome To :  showUserTest.blade.php </h1>
 </body>
 </html>
