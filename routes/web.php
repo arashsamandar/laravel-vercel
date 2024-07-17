@@ -6,11 +6,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',function(){
-    return response()->json([
-        'status' => 'success',
-        'message' => 'hello arash'
-    ])->header('Content-Type','application/json');
+Route::get('/home', function () {
+    return view('tests.home');
+});
+
+Route::get('/login', function () {
+    return view('tests.login');
 });
 
 Route::get('/testUser',function (){

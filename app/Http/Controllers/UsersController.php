@@ -11,5 +11,5 @@ class UsersController extends Controller
     {
         return view('tests.showUserTest');
     }
-
+    
 }
