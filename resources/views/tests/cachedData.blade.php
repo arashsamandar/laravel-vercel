@@ -8,6 +8,7 @@
     <title>Info Page</title>
 </head>
 <body>
+<h1>{{$sessionData}}</h1>
 <h3>File Path :
 
     <!-- Display the relative path of this file -->

@@ -13,6 +13,7 @@ class ShowsTestsPages extends Controller
     }
 
     public function showHomePage(): View {
+        session()->flash('success', 'Form submitted successfully');
         return view('tests.home');
     }
 
@@ -25,6 +26,13 @@ class ShowsTestsPages extends Controller
 
     public function showCachedDataPage(): View
     {
+        $sessionData = session('success');
+        return view('tests.cachedData', compact('sessionData'));
+    }
+
+    public function showFormPage(): View
+    {
         return view('tests.cachedData');
     }
+
 }
