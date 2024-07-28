@@ -32,6 +32,14 @@
         }
     },
     "scripts": {
+        "pre-install-cmd": [
+            "@php -r \"@unlink('composer.lock');\""
+        ],
+        "post-install-cmd": [
+            "@php artisan config:clear",
+            "@php artisan cache:clear",
+            "@php artisan view:clear"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
