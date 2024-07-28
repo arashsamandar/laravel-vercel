@@ -14,6 +14,12 @@ return [
     |
     */
 
+    'vercel_kv' => [
+        'url' => env('KV_REST_API_URL'),
+        'token' => env('KV_REST_API_TOKEN'),
+        'read_only_token' => env('KV_REST_API_READ_ONLY_TOKEN'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
