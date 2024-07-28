@@ -144,7 +144,6 @@ return [
 
         'client' => env('REDIS_CLIENT', 'predis'),
         'default' => [
-            "scheme" => "tls",
             "host" => "amazed-dove-33352.upstash.io",
             "password" => "default:AYJIAAIjcDFjYzA1OThhMGM1MTc0MDg0YmQxNGQ2ODQzNTUzMDFmNnAxMA",
             "port" => "6379",
