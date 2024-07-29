@@ -13,7 +13,7 @@ class ShowsTestsPages extends Controller
     }
 
     public function showHomePage(): View {
-        session()->flash('success', 'Form submitted successfully');
+        session(['success' => 'Form PERSISTED submitted successfully']);
         return view('tests.home');
     }
 
