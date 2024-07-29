@@ -19,4 +19,8 @@ Route::get('/redis-test', function () {
     }
 });
 
+Route::get('/someurl', function () {
+    return response()->json(['success' => true, 'message' => 'Hello World!']);
+});
+
 
