@@ -18,3 +18,5 @@ Route::get('/redis-test', function () {
         return 'Redis connection failed: ' . $e->getMessage();
     }
 });
+
+

@@ -143,31 +143,20 @@ return [
 //        ],
 
         'client' => env('REDIS_CLIENT', 'predis'),
+
         'default' => [
             "scheme" => "tls",
             "host" => "amazed-dove-33352.upstash.io",
             "password" => "AYJIAAIjcDFjYzA1OThhMGM1MTc0MDg0YmQxNGQ2ODQzNTUzMDFmNnAxMA",
             "port" => "6379",
-//            "port" => "33352",
-//            'url' => env('REDIS_URL'),
-//            'host' => parse_url(env('REDIS_URL', ''), PHP_URL_HOST),
-//            'password' => parse_url(env('REDIS_URL', ''), PHP_URL_PASS),
-//            'port' => parse_url(env('REDIS_URL', ''), PHP_URL_PORT),
-//            'database' => '0',
         ],
 
         'cache' => [
-            'url' => env('REDIS_URL'),
+            "scheme" => "tls",
+            "host" => "amazed-dove-33352.upstash.io",
+            "password" => "AYJIAAIjcDFjYzA1OThhMGM1MTc0MDg0YmQxNGQ2ODQzNTUzMDFmNnAxMA",
+            "port" => "6379",
         ],
-
-//        'cache' => [
-//            'url' => env('REDIS_URL'),
-//            'host' => env('REDIS_HOST', '127.0.0.1'),
-//            'username' => env('REDIS_USERNAME'),
-//            'password' => env('REDIS_PASSWORD'),
-//            'port' => env('REDIS_PORT', '6379'),
-//            'database' => env('REDIS_CACHE_DB', '1'),
-//        ],
 
     ],
 
