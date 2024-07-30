@@ -17,13 +17,6 @@ class ShowsTestsPages extends Controller
         return view('tests.home');
     }
 
-    public function showInfoPage(): JsonResponse {
-        return response()->json([
-            'users' => User::all(),
-            'File-Path' => str_replace(base_path(), '', __FILE__)
-        ]);
-    }
-
     public function showCachedDataPage(): View
     {
         $sessionData = session('success');
