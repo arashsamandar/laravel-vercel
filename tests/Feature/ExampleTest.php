@@ -17,10 +17,8 @@ class ExampleTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function create_example_logs(){
-        Log::info('this is a test info message');
-        Log::error('som arash test error',['context' => 'error was created by aarash salamander for testing log functionality on database']);
-        echo "\n Loggin Was Done With Success";
+    public function test_create_example_logs(){
+        $this->assertDatabaseHas('users', ['name' => 'arash']);
     }
 
     public function create_log_table(){
@@ -40,7 +38,7 @@ class ExampleTest extends TestCase
         echo "\nFinished creating 'logs' table";
     }
 
-    public function test_assert_logs_database_exists(){
+    public function assert_logs_database_exists(){
         $this->assertTrue(DB::table('logs')->exists());
     }
 
