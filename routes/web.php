@@ -3,6 +3,7 @@
 use App\Http\Controllers\ShowsTestsPages;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 Route::get('/', function () {return view('welcome');});
 
@@ -14,4 +15,5 @@ Route::get('/infoPage',[TestController::class,'showInfoPage']);
 Route::get('/redis-test',[TestController::class,'redisTest']);
 Route::get('/logging',[TestController::class,'showLogs']);
 
+Route::get('/user/{id}',[UsersController::class,'getUsers_by_id']);
 
