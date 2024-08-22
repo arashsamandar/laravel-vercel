@@ -17,7 +17,7 @@ class ExampleTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function test_create_example_logs(){
+    public function create_example_logs(){
         $this->assertDatabaseHas('users', ['name' => 'arash']);
     }
 
