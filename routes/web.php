@@ -5,7 +5,7 @@ use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 
-Route::get('/', function () {return view('welcome');});
+Route::get('/',[ShowsTestsPages::class,'showHomePage']);
 
 Route::get('/home',[ShowsTestsPages::class,'showHomePage']);
 Route::get('/login',[ShowsTestsPages::class,'showLoginPage']);
