@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 
 Route::get('/',[ShowsTestsPages::class,'showHomePage']);
-
 Route::get('/home',[ShowsTestsPages::class,'showHomePage']);
 Route::get('/login',[ShowsTestsPages::class,'showLoginPage']);
 Route::get('/cachedData',[ShowsTestsPages::class,'showCachedDataPage']);
