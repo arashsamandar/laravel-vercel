@@ -16,3 +16,6 @@ Route::get('/logging',[TestController::class,'showLogs']);
 
 Route::get('/user/{id}',[UsersController::class,'getUsers_by_id']);
 
+// ------------- Tests Routes -------------
+
+Route::get('/checkContainer',[UsersController::class,'checkingMyServiceAndProvider']);
