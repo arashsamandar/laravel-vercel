@@ -1,21 +1,19 @@
 <?php
 
-use App\Http\Controllers\ShowsTestsPages;
-use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsersController;
 
-Route::get('/',[ShowsTestsPages::class,'showHomePage']);
-Route::get('/home',[ShowsTestsPages::class,'showHomePage']);
-Route::get('/login',[ShowsTestsPages::class,'showLoginPage']);
-Route::get('/cachedData',[ShowsTestsPages::class,'showCachedDataPage']);
-
-Route::get('/infoPage',[TestController::class,'showInfoPage']);
-Route::get('/redis-test',[TestController::class,'redisTest']);
-Route::get('/logging',[TestController::class,'showLogs']);
-
-Route::get('/user/{id}',[UsersController::class,'getUsers_by_id']);
-
-// ------------- Tests Routes -------------
-
-Route::get('/checkContainer',[UsersController::class,'checkingMyServiceAndProvider']);
+Route::controller(App\Http\Controllers\UsersController::class)->group(function () {
+    Route::get('/user/{id}','getUsers_by_id');
+});
+Route::controller(App\Http\Controllers\TestController::class)->group(function () {
+    Route::get('/infoPage','showInfoPage');
+    Route::get('/redis-test','redisTest');
+    Route::get('/logging','showLogs');
+    Route::get('/checkContainer','checkingMyServiceAndProvider');
+});
+Route::controller(App\Http\Controllers\ShowsTestsPages::class)->group(function () {
+    Route::get('/','showHomePage');
+    Route::get('/home','showHomePage');
+    Route::get('/login','showLoginPage');
+    Route::get('/cachedData','showCachedDataPage');
+});

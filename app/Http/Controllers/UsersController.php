@@ -15,11 +15,4 @@ class UsersController extends Controller
         return User::find($id);
     }
 
-    public function checkingMyServiceAndProvider(): JsonResponse
-    {
-//        $arashService = App::make(ArashSimpleService::class);
-        $arashService = \app()->make(ArashSimpleService::class);
-        $arashAnswer = $arashService->getArashNameFromSomeOtherService();
-        return response()->json(['answer' => $arashAnswer]);
-    }
 }
