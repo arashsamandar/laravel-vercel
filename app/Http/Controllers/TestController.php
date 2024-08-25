@@ -7,6 +7,8 @@ use App\Services\ArashSimpleService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
+use App\Facades\ArashFacade;
+use Arash;
 
 class TestController extends Controller
 {
@@ -32,6 +34,11 @@ class TestController extends Controller
         $b = $request->input('b');
         $result = $a + $b;
         return $result;
+    }
+
+    public function arashTest()
+    {
+        return Arash::getArashNameFromSomeOtherService();
     }
 
 }

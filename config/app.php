@@ -123,4 +123,12 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /**
+     * Facades Aliases
+     */
+
+    'aliases' => [
+        'Arash' => App\Facades\ArashFacade::class
+    ]
+
 ];

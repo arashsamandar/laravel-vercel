@@ -9,6 +9,7 @@ Route::controller(App\Http\Controllers\TestController::class)->group(function ()
     Route::get('/infoPage','showInfoPage');
     Route::get('/redis-test','redisTest');
     Route::get('/logging','showLogs');
+    Route::get('/arashtest','arashTest');
 });
 Route::controller(App\Http\Controllers\ShowsTestsPages::class)->group(function () {
     Route::get('/','showHomePage');
