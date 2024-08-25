@@ -8,11 +8,7 @@ use Illuminate\Http\JsonResponse;
 
 class UsersController extends Controller
 {
-    public function __construct(){
-    }
-
     public function getUsers_by_id($id){
         return User::find($id);
     }
-
 }

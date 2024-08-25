@@ -36,9 +36,18 @@ class TestController extends Controller
 
     public function checkingMyServiceAndProvider(): JsonResponse
     {
-//        $arashService = App::make(ArashSimpleService::class);
         $arashService = \app()->make(ArashSimpleService::class);
         $arashAnswer = $arashService->getArashNameFromSomeOtherService();
         return response()->json(['answer' => $arashAnswer]);
+    }
+
+    public function returnStringInJsonResponse(): JsonResponse {
+        $arashStringValue = 'some shit';
+        try{
+            $arashStringValue = App\ArashClass\ArashSampleClass::returnsDummyString();
+        }catch (\Exception $e){
+            $this->fail($e->getMessage());
+        }
+        return response()->json(['answer' => $arashStringValue]);
     }
 }

@@ -10,10 +10,15 @@ Route::controller(App\Http\Controllers\TestController::class)->group(function ()
     Route::get('/redis-test','redisTest');
     Route::get('/logging','showLogs');
     Route::get('/checkContainer','checkingMyServiceAndProvider');
+    Route::get('/testtest','returnStringInJsonResponse');
 });
 Route::controller(App\Http\Controllers\ShowsTestsPages::class)->group(function () {
     Route::get('/','showHomePage');
     Route::get('/home','showHomePage');
     Route::get('/login','showLoginPage');
     Route::get('/cachedData','showCachedDataPage');
+});
+
+Route::controller(\App\Http\Controllers\ShowsTestsPages::class)->group(function () {
+
 });
