@@ -10,8 +10,8 @@
         "test": "tests"
     },
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
+        "development": "npm run development",
+        "dev": "mix",
         "watch": "mix watch",
         "prod": "npm run production",
         "production": "mix --production"
@@ -26,5 +26,10 @@
         "tailwindcss": "^3.4.4",
         "webpack": "^5.93.0",
         "webpack-cli": "^5.1.4"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.24.7",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     }
 }
