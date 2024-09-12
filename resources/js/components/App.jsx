@@ -2,8 +2,16 @@ import React from "react";
 
 export default function App(){
     return(
-        <header className="bg-blue-500 with-3d-shadow full-width text-center">
-            Hello arash Samandar
-        </header>
+        <div className="container">
+            <div className="row justify-content-center">
+                <div className="col-md-8">
+                    <div className="card">
+                        <div className="card-header">Example Component</div>
+
+                        <div className="card-body">I'm an example component!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
