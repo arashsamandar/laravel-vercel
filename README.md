@@ -10,7 +10,7 @@
 Arash Laravel Web App On Vercel.app
 </p>
 <p style="text-align: center">
-<a href="https://arashh.vercel.app">
-arashh.vercel.app
+<a href=""https://arassh.vercel.app/home>
+arassh.vercel.app
 </a>
 </p>
